@@ -342,13 +342,11 @@ public class GridManager : MonoBehaviour {
             stars = 3;
         } else if (count >= max_score - 5) {
             stars = 2;
-        } else if (count >= max_score - 8) {
-            stars = 1;
         } else {
-            stars = 0;
-        }
+            stars = 1;
+        } 
         
-        PlayerPrefs.SetInt("cur_stars", stars);
+        PlayerPrefs.SetInt("num_stars", stars);
         PlayerPrefs.SetInt($"stars_{curLevel}", stars);
         SceneManager.LoadScene("Level Complete");
     }
