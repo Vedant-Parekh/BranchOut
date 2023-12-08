@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level Selection.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Cut 8.unity
+    path: Assets/Scenes/Cut 9.unity
     guid: c8c4303bbf73da94aa3cbbf47371bbfe
   - enabled: 1
     path: Assets/Scenes/Cut 1.unity
@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cut 7.unity
     guid: 00b5af851675a3e4e8b700417d5edeec
+  - enabled: 1
+    path: Assets/Scenes/Cut 8.unity
+    guid: a94ac6fbf3e73d547835ed47fb1084d7
   - enabled: 1
     path: Assets/Scenes/Level Complete.unity
     guid: 44d4798aad0a1dd4883b9b8e2c2321a3

@@ -8,7 +8,7 @@ public class cut_script : MonoBehaviour
 {
     public int cur_scene;
     public void nextScene() {
-        if(cur_scene < 8) {
+        if(cur_scene < 9) {
             SceneManager.LoadScene("Cut " + (cur_scene + 1));
         } else {
             SceneManager.LoadScene("Level Selection");

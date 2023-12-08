@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System; 
 
 public class completion_script : MonoBehaviour
 {
@@ -14,10 +15,12 @@ public class completion_script : MonoBehaviour
     void Start()
     {
         int cur_level = PlayerPrefs.GetInt("cur_level", 1);
-        PlayerPrefs.SetInt("highestLevel", (cur_level + 1));
+        int cur_highestLevel = PlayerPrefs.GetInt("highestLevel", 1);
+        PlayerPrefs.SetInt("highestLevel", Math.Max(cur_level + 1, cur_highestLevel));
         StarsToArray();
         int recieved = PlayerPrefs.GetInt("num_stars", 0);
-        PlayerPrefs.SetInt("stars_" + cur_level, recieved);
+        int cur_num_stars = PlayerPrefs.GetInt("stars_" + cur_level, 0);
+        PlayerPrefs.SetInt("stars_" + cur_level, Math.Max(recieved, cur_num_stars));
         Debug.Log("Received: " + recieved);
         Debug.Log("cur_level: " + cur_level);
         Debug.Log("PP: " + PlayerPrefs.GetInt("stars_" + cur_level, 100));

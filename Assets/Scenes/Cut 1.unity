@@ -846,8 +846,8 @@ MonoBehaviour:
     lumber company''s arrival spreads. You and a group of concerned villagers gather
     to discuss the situation.]'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 463e69f7980faab4a9d5b1441c816809, type: 2}
-  m_sharedMaterial: {fileID: -5880463430491798180, guid: 463e69f7980faab4a9d5b1441c816809, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -871,10 +871,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.15
-  m_fontSizeBase: 35.1
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -907,7 +907,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 58.50479, y: 7.80064, z: 50.7041, w: 5.850479}
+  m_margin: {x: 58.50479, y: 18.901836, z: 50.7041, w: 19.726986}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

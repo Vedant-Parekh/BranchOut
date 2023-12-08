@@ -347,7 +347,6 @@ public class GridManager : MonoBehaviour {
         } 
         
         PlayerPrefs.SetInt("num_stars", stars);
-        PlayerPrefs.SetInt($"stars_{curLevel}", stars);
         SceneManager.LoadScene("Level Complete");
     }
 }
