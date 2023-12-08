@@ -30,7 +30,8 @@ public class setting_script : MonoBehaviour
     }
 
     public void LoadMenu() {
-        SceneManager.LoadScene("Level Selection");
+        // SceneManager.LoadScene("Level Selection");
+        SceneManager.LoadScene("Main");
     }
 
     public void UnMute() {
@@ -48,7 +49,7 @@ public class setting_script : MonoBehaviour
     }
 
     public void ResetProgress() {
-        PlayerPrefs.DeleteKey("highestLevel");
+        PlayerPrefs.DeleteAll();
     }
 
     public void DisableCutscene() {
