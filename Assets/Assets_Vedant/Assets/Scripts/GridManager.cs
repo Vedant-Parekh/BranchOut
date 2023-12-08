@@ -19,6 +19,8 @@ public class GridManager : MonoBehaviour {
     public Button run, reset;
     private Dictionary<Vector2, Tile> _tiles;
     [SerializeField] private Text score_text;
+
+    [SerializeField] private Sprite[] bulldozer_sprites = new Sprite[4];
     [SerializeField] private int[] _movement_array;
     
     private float tile_length = 1.0f;
@@ -214,8 +216,30 @@ public class GridManager : MonoBehaviour {
     IEnumerator animateBulldozer(GameObject bulldozer, Tile tile) {
         float moveSpeed = 5f;
         Vector3 targetPosition = tile.transform.position;
+        targetPosition[0] += 0.06f;
+        targetPosition[1] += 0.11f;
         float distance = Vector3.Distance(bulldozer.transform.position, targetPosition);
         Vector3 direction = (targetPosition - bulldozer.transform.position).normalized;
+
+        float delta_x = targetPosition[0] - bulldozer.transform.position[0];
+        float delta_y = targetPosition[1] - bulldozer.transform.position[1];
+
+        SpriteRenderer sr = bulldozer.GetComponent<SpriteRenderer>();
+        if (Math.Abs(delta_x) - Math.Abs(delta_y) < 0.01f)
+        {
+            if (delta_y > 0)
+                sr.sprite = bulldozer_sprites[0];
+            else
+                sr.sprite = bulldozer_sprites[2];
+        }
+        else
+        {
+            if (delta_x > 0)
+                sr.sprite = bulldozer_sprites[3];
+            else
+                sr.sprite = bulldozer_sprites[1];
+        }
+
         while (distance > 0.05f)
         {
             bulldozer.transform.Translate(direction * moveSpeed * Time.deltaTime, Space.World);
